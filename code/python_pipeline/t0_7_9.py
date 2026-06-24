@@ -39,7 +39,7 @@ if len(g):
 else: print("muscle fetch empty — skip")
 
 print("\n"+"="*64); print("TASK 9 — power / minimum detectable effect"); print("="*64)
-inst=pd.read_csv("/sessions/determined-eager-davinci/mnt/후속연구/O2_scripts/data/instruments_frozen.csv")
+inst=pd.read_csv("data/processed/instruments_frozen.csv")
 r2=inst[(inst.gene=="ROCK2")&(inst.tier.isin(["ROCK2_blood_lead","ROCK2_blood_r2.01"]))]
 R2x=float((2*r2.eaf*(1-r2.eaf)*r2.beta**2).sum())
 za,zb=nd.inv_cdf(0.975),nd.inv_cdf(0.8)

@@ -4,7 +4,7 @@ import matplotlib; matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.patches import FancyBboxPatch, FancyArrowPatch
 plt.rcParams.update({"pdf.fonttype":42,"ps.fonttype":42,"font.family":"DejaVu Sans","savefig.dpi":300})
-OUT="/sessions/determined-eager-davinci/mnt/outputs/rock2_mr/figs"
+OUT=os.environ.get("FIG_OUT","figs"); os.makedirs(OUT,exist_ok=True)
 C=dict(meas="#56B4E9", drug="#E69F00", kin="#009E73", dis="#CC79A7", concl="#D55E00", grey="#888888")
 
 fig=plt.figure(figsize=(11,5.4)); ax=fig.add_subplot(111); ax.axis("off"); ax.set_xlim(0,10); ax.set_ylim(0,10)

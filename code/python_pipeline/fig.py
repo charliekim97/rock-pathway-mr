@@ -11,7 +11,7 @@ plt.rcParams.update({
     "axes.linewidth":0.8, "axes.edgecolor":"#333333",
     "savefig.dpi":300, "figure.dpi":150,
 })
-OUT="/sessions/determined-eager-davinci/mnt/outputs/rock2_mr/figs"
+OUT=os.environ.get("FIG_OUT","figs"); os.makedirs(OUT,exist_ok=True)
 # Okabe-Ito colorblind-safe
 C=dict(blue="#0072B2",orange="#E69F00",green="#009E73",purple="#CC79A7",
        vermillion="#D55E00",sky="#56B4E9",yellow="#F0E442",grey="#999999",black="#000000")
