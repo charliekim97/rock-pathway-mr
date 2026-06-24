@@ -1,0 +1,5 @@
+eQTL   outcome        n    PP3    PP4  top
+RHOA   HepaticFat  2529  0.183  0.020  rs115431681
+RHOA   BMI         3931  0.382  0.309  rs2681781
+ROCK1  HepaticFat  1387  0.033  0.070  rs142716063
+ROCK1  BMI         2059  0.046  0.004  rs142716063

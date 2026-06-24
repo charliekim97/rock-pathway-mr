@@ -1,0 +1,13 @@
+=== ROCK2 (blood eQTL) x fibrosis-axis coloc ===
+  ROCK2 x Cirrhosis   : PP3=0.301 PP4=0.010 (n=8199)
+  ROCK2 x NAFLD_meta  : PP3=0.186 PP4=0.008 (n=6426)
+  ROCK2 x FibrChirK74 : PP3=0.294 PP4=0.010 (n=8199)
+  ROCK2 x NASH        : PP3=0.441 PP4=0.093 (n=8199)
+
+=== ROCK1 / RHOA (blood eQTL) x Cirrhosis ===
+  ROCK1 x Cirrhosis: PP3=0.095 PP4=0.055 (n=1662)
+  RHOA x Cirrhosis: PP3=0.069 PP4=0.023 (n=3182)
+
+=== ROCK1/RHOA x Cirrhosis MR (lead Wald) ===
+  ROCK1 (rs142716063): -0.107 [-0.743,+0.529] p=0.74
+  RHOA (rs115431681): +0.159 [-0.257,+0.576] p=0.45

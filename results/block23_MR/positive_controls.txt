@@ -1,0 +1,8 @@
+=== POSITIVE CONTROLS (eQTLGen blood cis-eQTL -> outcome, lead-SNP Wald) ===
+
+KCNJ11 -> T2D  | eQTL rs2074310 F=166 | Wald logOR=+0.409 [+0.310,+0.508] p=6.7e-16 (outcome SNP p=5.7e-16)
+SORT1  -> LDL  | eQTL rs657420 | Wald betaSD=-0.766 [-0.858,-0.673] p=0 (outcome SNP p=7.0e-60)
+
+GIPR   -> 2hGlu   | eQTL rs12972094 F=57 | Wald=-0.218 [-0.494,+0.059] p=0.12 (SNP p=1.2e-01)
+GIPR   -> FG      | eQTL rs12972094 F=57 | Wald=-0.032 [-0.082,+0.017] p=0.2 (SNP p=2.0e-01)
+GIPR   -> T2D-Xue | rs12972094 not in study

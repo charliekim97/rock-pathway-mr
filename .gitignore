@@ -1,0 +1,23 @@
+# Manuscript drafts (not part of the code record)
+*.docx
+~$*
+
+# Large raw public summary statistics — re-downloadable, do NOT commit
+*.vcf
+*.vcf.gz
+cis-eQTLs_full*
+finngen_R12_*.gz
+nafld_meta.h.tsv.gz
+DIAMANTE/
+fine_mapping_upload/
+*.bgz
+# (large .gz raw downloads in general; processed *.ld.gz under data/processed are kept)
+/**/raw/
+
+# OS / editor / Python
+.DS_Store
+.Rhistory
+.RData
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
