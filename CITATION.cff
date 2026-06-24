@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this software or processed data, please cite it as below."
+title: "Human genetics of RhoA–ROCK expression highlights limits of expression-based validation for an intracellular kinase target"
+type: software
+authors:
+  - family-names: Kim
+    given-names: Sangeon Charles
+    affiliation: "Division of Endocrinology, Diabetes, and Metabolism, Beth Israel Deaconess Medical Center and Harvard Medical School, Boston, MA, USA"
+  - family-names: Kim
+    given-names: Young-Bum
+    affiliation: "Division of Endocrinology, Diabetes, and Metabolism, Beth Israel Deaconess Medical Center and Harvard Medical School, Boston, MA, USA"
+license: MIT
+repository-code: "https://github.com/charliekim97/rock-pathway-mr"
+doi: "10.5281/zenodo.20835589"
+keywords:
+  - Mendelian randomization
+  - colocalization
+  - cis-eQTL
+  - ROCK2
+  - ROCK1
+  - RHOA
+  - drug-target validation
+  - SuSiE

@@ -13,8 +13,8 @@ drug-target-validation, cardiometabolic, nafld, type-2-diabetes, susie, coloc, b
 ---
 
 ## Zenodo — metadata (fill when you mint the DOI at acceptance)
-- **Title:** Code and processed data for "Human genetic de-prioritization of RhoA–ROCK
-  expression: limits of expression-based validation for an intracellular kinase target"
+- **Title:** Code and processed data for "Human genetics of RhoA–ROCK
+  expression highlights limits of expression-based validation for an intracellular kinase target"
 - **Authors / creators:** Kim, Sangeon (BIDMC, Harvard Medical School);
   Kim, Young-Bum (BIDMC, Harvard Medical School)  — add ORCIDs
 - **Upload type:** Software
