@@ -4,8 +4,7 @@
 
 Public-data, lab-independent, fully reproducible. This repository accompanies the manuscript:
 
-> *Human genetics of RhoA–ROCK expression highlights limits of expression-based
-> validation for an intracellular kinase target.* Kim S. & Kim Y.-B. (manuscript; DOI on publication).
+> *Human genetics of RhoA–ROCK expression highlights limits of expression-based validation for an intracellular kinase target
 
 ---
 
