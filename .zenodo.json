@@ -1,14 +1,31 @@
 {
   "upload_type": "software",
   "title": "Human genetics of RhoA–ROCK expression highlights limits of expression-based validation for an intracellular kinase target",
-  "description": "Code, processed inputs, result tables, and figures accompanying the study \"Human genetics of RhoA–ROCK expression highlights limits of expression-based validation for an intracellular kinase target\" (Kim & Kim). We test whether genetically proxied expression of the RhoA–ROCK pathway (ROCK2, ROCK1, RHOA) is causally associated with cardiometabolic and fibrosis/liver outcomes, using two-sample cis-eQTL Mendelian randomization and Bayesian colocalization (single-variant coloc.abf and multi-signal coloc.susie), benchmarked against tissue-appropriate positive controls. Main finding: no robust evidence that constitutive ROCK-pathway expression affects these traits (all SuSiE-evaluable PP.H4 < 0.11); type 2 diabetes null across European, Finnish, and trans-ancestry analyses; positive controls recovered (KCNJ11 to T2D PP4 = 0.89; liver SORT1 to LDL PP4 = 1.00); coloc.abf and coloc.susie concordant. The null is interpreted as a limit of expression-based genetic validation for an intracellular, activity-dependent kinase target. Contents: Python MR / coloc.abf pipeline; R coloc.susie inputs and runner; processed instruments and cis-region extracts; per-locus SuSiE inputs (z/beta + 1000G EUR LD); result tables; and code to regenerate all figures. Raw summary statistics are publicly available from the original consortia (eQTLGen, GTEx / eQTL Catalogue, GWAS Catalog, MAGIC, GLGC, FinnGen R12, DIAMANTE, Genebass, 1000 Genomes); see the repository data/README. Repository: https://github.com/charliekim97/rock-pathway-mr",
+  "description": "Code, processed inputs, result tables, and figures accompanying the study \"Human genetics of RhoA–ROCK expression highlights limits of expression-based validation for an intracellular kinase target\" (Kim & Kim). We test whether genetically proxied expression of the RhoA–ROCK pathway (ROCK2, ROCK1, RHOA) is causally associated with cardiometabolic and fibrosis/liver outcomes, using two-sample cis-eQTL Mendelian randomization and Bayesian colocalization (single-variant coloc.abf and multi-signal coloc.susie), benchmarked against tissue-appropriate positive controls. Main finding: no robust evidence that constitutive ROCK-pathway expression affects these traits; type 2 diabetes null across European, Finnish, and trans-ancestry analyses; positive controls recovered (KCNJ11 to T2D PP4 = 0.89; liver SORT1 to LDL PP4 = 1.00). At the ROCK loci, multi-signal coloc.susie was not evaluable because the disease outcome produced no SuSiE credible set (verified at coverage 0.95/0.50 and relaxed purity), so single-variant coloc.abf (all PP4 low) was retained; coloc.susie was evaluable and colocalized only at the KCNJ11 positive control (PP.H4 = 0.89). The null is interpreted as a limit of expression-based genetic validation for an intracellular, activity-dependent kinase target. Contents: Python MR / coloc.abf pipeline; R coloc.susie inputs, runner and credible-set evaluability audit; processed instruments and cis-region extracts; per-locus SuSiE inputs (z/beta + 1000G EUR LD); result tables; and code to regenerate all figures. Raw summary statistics are publicly available from the original consortia (eQTLGen, GTEx / eQTL Catalogue, GWAS Catalog, MAGIC, GLGC, FinnGen R12, DIAMANTE, Genebass, 1000 Genomes); see the repository data/README. Repository: https://github.com/charliekim97/rock-pathway-mr",
   "creators": [
-    { "name": "Kim, Sangeon Charles", "affiliation": "Division of Endocrinology, Diabetes, and Metabolism, Beth Israel Deaconess Medical Center and Harvard Medical School, Boston, MA, USA" },
-    { "name": "Kim, Young-Bum", "affiliation": "Division of Endocrinology, Diabetes, and Metabolism, Beth Israel Deaconess Medical Center and Harvard Medical School, Boston, MA, USA" }
+    {
+      "name": "Kim, Sangeon Charles",
+      "affiliation": "Division of Endocrinology, Diabetes, and Metabolism, Beth Israel Deaconess Medical Center and Harvard Medical School, Boston, MA, USA",
+      "orcid": "0009-0005-7227-323X"
+    },
+    {
+      "name": "Kim, Young-Bum",
+      "affiliation": "Division of Endocrinology, Diabetes, and Metabolism, Beth Israel Deaconess Medical Center and Harvard Medical School, Boston, MA, USA",
+      "orcid": "0000-0001-9471-6330"
+    }
   ],
   "license": "MIT",
   "keywords": [
-    "Mendelian randomization", "colocalization", "cis-eQTL", "ROCK2", "ROCK1", "RHOA",
-    "drug-target validation", "NAFLD", "type 2 diabetes", "SuSiE", "coloc"
+    "Mendelian randomization",
+    "colocalization",
+    "cis-eQTL",
+    "ROCK2",
+    "ROCK1",
+    "RHOA",
+    "drug-target validation",
+    "NAFLD",
+    "type 2 diabetes",
+    "SuSiE",
+    "coloc"
   ]
 }

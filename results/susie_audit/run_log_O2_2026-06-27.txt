@@ -1,0 +1,35 @@
+O2 coloc.susie audit — run log (provenance record)
+Host: login01 / compute via `srun -p short`; job 45725124
+Environment (CONFIRMED = manuscript-cited versions):
+    coloc 5.2.3 | susieR 0.14.2 | R version 4.5.2 (2025-10-31)
+INDIR  = /home/sak2343/rock2_o2/susie_inputs   (8 frozen loci)
+OUTDIR = /home/sak2343/rock2_o2/susie_audit
+
+Per-locus convergence + coloc.abf posteriors (PP.H0..H4) + verdict
+------------------------------------------------------------------
+KCNJ11-T2D            exposure converged=TRUE  outcome converged=TRUE
+    abf: H0 1.56e-52 | H1 1.20e-21 | H2 8.04e-33 | H3 0.0612 | H4 0.939
+    exp_CS=1 out_CS=1 (cov.95/.50/purity.1 = 1/1/1) effects_fired=1 min_p_out=1.05e-26
+    n_signal_pairs=1  coloc.susie PP.H4=0.888  -> A: coloc.susie EVALUABLE (control colocalizes)
+ROCK2-BMI            exposure converged=TRUE  outcome converged=TRUE
+    abf: H1 0.816 | H3 0.0792 | H4 0.104   exp_CS=4 out_CS=0/0/0 fired=0 min_p_out=4.93e-05  -> B (not evaluable)
+ROCK1-hepaticfat     converged TRUE/TRUE
+    abf: H1 0.918 | H3 0.0133 | H4 0.0685  exp_CS=3 out_CS=0/0/0 fired=0 min_p_out=0.0193    -> B
+ROCK2muscle-cirrhosis converged TRUE/TRUE
+    abf: H1 0.900 | H3 0.0421 | H4 0.0323  exp_CS=1 out_CS=0/0/0 fired=0 min_p_out=0.00698   -> B
+ROCK2-T2D            converged TRUE/TRUE
+    abf: H1 0.712 | H3 0.285  | H4 0.00316 exp_CS=4 out_CS=0/0/0 fired=0 min_p_out=0.00057   -> B  (note: H3 distinct-variant largest)
+ROCK2-NAFLD          converged TRUE/TRUE
+    abf: H1 0.957 | H3 0.0334 | H4 0.00989 exp_CS=5 out_CS=0/0/0 fired=0 min_p_out=0.0166    -> B
+ROCK1-T2D            converged TRUE/TRUE
+    abf: H1 0.968 | H3 0.0148 | H4 0.0173  exp_CS=3 out_CS=0/0/0 fired=0 min_p_out=0.00829   -> B
+ROCK2-cirrhosis      exposure converged=FALSE  outcome converged=TRUE
+    abf: H1 0.905 | H3 0.0822 | H4 0.0127  exp_CS=NA out_CS=0/0/0 fired=0 min_p_out=0.00416  -> exposure SuSiE error; abf only
+
+VERDICT: KCNJ11 control = Case A (genuine coloc.susie, PP.H4=0.888, outcome regional p=1e-26).
+         All 6 ROCK loci = Case B: 0 outcome credible sets at coverage 0.95, 0.50 AND relaxed
+         purity (min_abs_corr 0.1), 0 single-effect components fired, regional outcome min-p
+         5e-4..0.02 (non-significant). Case C (purity/coverage filtering) is EXCLUDED.
+         => multi-signal colocalization not evaluable at ROCK loci; coloc.abf (PP4<0.11) retained.
+Raw per-locus objects (*_susie_objects.rds, *_outcome_CS.tsv, *_outcome_CS_sensitivity.tsv,
+summaries) saved under OUTDIR for reviewer inspection.

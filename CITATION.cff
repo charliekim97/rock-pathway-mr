@@ -6,9 +6,11 @@ authors:
   - family-names: Kim
     given-names: Sangeon Charles
     affiliation: "Division of Endocrinology, Diabetes, and Metabolism, Beth Israel Deaconess Medical Center and Harvard Medical School, Boston, MA, USA"
+    orcid: "https://orcid.org/0009-0005-7227-323X"
   - family-names: Kim
     given-names: Young-Bum
     affiliation: "Division of Endocrinology, Diabetes, and Metabolism, Beth Israel Deaconess Medical Center and Harvard Medical School, Boston, MA, USA"
+    orcid: "https://orcid.org/0000-0001-9471-6330"
 license: MIT
 repository-code: "https://github.com/charliekim97/rock-pathway-mr"
 doi: "10.5281/zenodo.20835589"

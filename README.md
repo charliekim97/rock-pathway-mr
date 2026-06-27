@@ -27,7 +27,7 @@ against pharmacological ROCK2 inhibition.
 | MR, 3 genes × 10 primary outcomes × 5 tissues | null; no PP4 exceeded 0.40 |
 | Well-instrumented ROCK2 / ROCK1 colocalization | all PP4 ≤ 0.07 |
 | T2D (European DIAMANTE / Finnish FinnGen / trans-ancestry) | null in all three |
-| Multi-signal colocalization (`coloc.susie`, incl. nominal loci) | all SuSiE-evaluable PP.H4 < 0.11 |
+| Multi-signal colocalization (`coloc.susie`) | not evaluable at ROCK loci — outcome has no SuSiE credible set (coverage 0.95/0.50 + relaxed purity); `coloc.abf` retained; KCNJ11 control colocalizes (PP.H4 = 0.89) |
 | Positive controls | KCNJ11→T2D PP4 = 0.89; liver SORT1→LDL PP4 = 1.00 |
 | Rare LoF burden (Genebass) | non-significant (underpowered) |
 
@@ -44,6 +44,8 @@ code/
   O2_R_suite/        R pipeline run on an HPC cluster (config / helpers / driver +
                      task0–task11); task4_susie_coloc.R = conditional colocalization
   susie_runner/      run_susie.R — coloc.susie runner for the 8 loci (+ positive control)
+                     audit_susie.R / run_on_o2.sh — credible-set evaluability audit
+                     (raw SuSiE objects; outcome CS at coverage 0.95/0.50 + relaxed purity)
 data/
   processed/         small reproducibility-grade inputs committed here
     instruments_frozen.csv             frozen instrument set (gene, SNP, tier, alleles, β, se, eaf)
@@ -56,6 +58,7 @@ data/
     susie_inputs/                      per-locus z/β + 1000G-EUR LD + meta for coloc.susie
   README.md          how to obtain the raw (large) public summary statistics
 results/             per-analysis reports (.md) + result tables (.csv/.txt), block0–block7
+  susie_audit/         coloc.susie evaluability audit: rebuilt Table S1, O2 run log, README
 figures/             Fig 1–6 (PNG + PDF)
 REPO_METADATA.md     copy-paste GitHub description / topics / Zenodo metadata
 LICENSE              MIT
@@ -73,7 +76,10 @@ LICENSE              MIT
   imaging-NAFLD replication; small NASH GWAS in supplement.
 - **MR:** Wald ratio / IVW / LD-corrected IVW; Steiger filtering; cross-tissue concordance.
 - **Colocalization:** `coloc.abf` (PP4 threshold 0.75) over full cis regions; conditional
-  multi-signal `coloc.susie` (susieR) at nominal + selected loci, LD from 1000G EUR.
+  multi-signal `coloc.susie` (susieR) at nominal + selected loci, LD from 1000G EUR. At the ROCK
+  loci the disease outcome yielded no SuSiE credible set (verified at coverage 0.95/0.50 + relaxed
+  purity), so `coloc.susie` was not evaluable and full-region `coloc.abf` was retained; the KCNJ11
+  control colocalized (PP.H4 = 0.89) — see `results/susie_audit/`.
 - **Controls / robustness:** KCNJ11→T2D, tissue-matched SORT1→LDL; prior- and
   power-sensitivity; multi-ancestry T2D (DIAMANTE EUR + trans-ancestry, FinnGen); Genebass.
 
@@ -95,6 +101,7 @@ python code/python_pipeline/fig5.py          # Figure 5 (conceptual)
 
 # 3. conditional (multi-signal) colocalization
 Rscript code/susie_runner/run_susie.R        # uses data/processed/susie_inputs/
+Rscript code/susie_runner/audit_susie.R      # credible-set evaluability audit -> results/susie_audit/
 #   full HPC pipeline: code/O2_R_suite/  (edit config.R paths, then run_all.sh)
 ```
 Processed inputs in `data/processed/` let you re-run MR/coloc and `coloc.susie` without
